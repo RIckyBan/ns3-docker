@@ -17,10 +17,10 @@ RUN sh requirements.sh
 
 # Configure and compile NS-3
 RUN cd ns-allinone-3.30/ns-3.30 && ./waf configure --build-profile=debug --enable-examples --enable-tests && ./waf
-RUN cd /usr/ns-allinone-3.30
+RUN cd /usr/ns-allinone-3.30/
 
 # For visualizer
-RUN https://files.pythonhosted.org/packages/e7/9f/32655239a4d978e92dd59233c4a3fd8e064ef1193487f58c889fe116b780/PyBindGen-0.20.1.tar.gz
+RUN wget https://files.pythonhosted.org/packages/e7/9f/32655239a4d978e92dd59233c4a3fd8e064ef1193487f58c889fe116b780/PyBindGen-0.20.1.tar.gz
 RUN tar -xf PyBindGen-0.20.1.tar.gz
 
 # For click
