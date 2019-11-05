@@ -26,7 +26,7 @@ RUN tar -xf PyBindGen-0.20.1.tar.gz
 # For click
 RUN git clone https://github.com/kohler/click.git
 RUN cd click
-RUN ./configure --enable-userlevel --disable-linuxmodule --enable-nsclick
+RUN ./waf configure --enable-userlevel --disable-linuxmodule --enable-nsclick
 RUN make && cd ..
 
 # For brite
