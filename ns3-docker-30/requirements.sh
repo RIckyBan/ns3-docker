@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 apt install -y wget
 
 # minimal requirements for Python users (release 3.30 and ns-3-dev)

@@ -1,4 +1,4 @@
-NAME=docker-ns3-30
+NAME=docker-ns3-30-test
 
 build: Dockerfile
 	if [ -d "./ns-allinone-3.30" ]; then \
@@ -8,7 +8,6 @@ build: Dockerfile
 		tar -xf ./ns-allinone-3.30.tar.bz2; \
 		rm ./ns-allinone-3.30.tar.bz2; \
 	fi
-	socat TCP-LISTEN:6000,reuseaddr,fork UNIX-CLIENT:\"$DISPLAY\" &
 	docker build -t $(NAME) .
 
 run:
