@@ -16,34 +16,34 @@ RUN apt-get update && \
     sh requirements.sh
 
 # Configure and compile NS-3
-RUN cd ns-allinone-3.30/ns-3.30 && \
+RUN cd /usr/ns-allinone-3.30/ns-3.30 && \
     ./waf configure --build-profile=debug --enable-examples --enable-tests && \
-    ./waf && \
-    cd /usr/ns-allinone-3.30/
+    ./waf
 
 # For visualizer
-RUN wget https://files.pythonhosted.org/packages/e7/9f/32655239a4d978e92dd59233c4a3fd8e064ef1193487f58c889fe116b780/PyBindGen-0.20.1.tar.gz && \
+RUN cd /usr/ns-allinone-3.30/ && \
+    wget https://files.pythonhosted.org/packages/e7/9f/32655239a4d978e92dd59233c4a3fd8e064ef1193487f58c889fe116b780/PyBindGen-0.20.1.tar.gz && \
     tar -xf PyBindGen-0.20.1.tar.gz
 
 # For click
-RUN git clone https://github.com/kohler/click.git && \
+RUN cd /usr/ns-allinone-3.30/ && \
+    git clone https://github.com/kohler/click.git && \
     cd click && \
     ./configure --enable-userlevel --disable-linuxmodule --enable-nsclick && \
-    make && \
-    cd ..
+    make
 
 # For brite
-RUN hg clone http://code.nsnam.org/BRITE && \
+RUN cd /usr/ns-allinone-3.30/ && \
+    hg clone http://code.nsnam.org/BRITE && \
     cd BRITE && \
-    make && \
-    cd ..
+    make
 
 # For openflow
-RUN hg clone http://code.nsnam.org/openflow && \
+RUN cd /usr/ns-allinone-3.30/ && \
+    hg clone http://code.nsnam.org/openflow && \
     cd openflow && \
     ./waf configure && \
-    ./waf build && \
-    cd ..
+    ./waf build
 
 # For integration
 RUN cd /usr/ns-allinone-3.30/ns-3.30 && \

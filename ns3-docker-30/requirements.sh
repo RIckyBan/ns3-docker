@@ -1,6 +1,7 @@
 #!/bin/bash
 
-apt install -y wget
+# for utility
+apt install -y wget vim
 
 # minimal requirements for Python users (release 3.30 and ns-3-dev)
 apt install -y gcc g++ python python3 python3-dev
