@@ -11,7 +11,7 @@ WORKDIR /usr
 
 COPY . /usr
 
-    # Install needed packages
+# Install needed packages
 RUN set -x && \
     apt-get update && \
     sh requirements.sh && \
