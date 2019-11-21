@@ -13,7 +13,7 @@ apt install -y python3-setuptools git mercurial
 apt install -y qt5-default mercurial
 
 # Support for ns-3-pyviz visualizer
-apt install -y gir1.2-goocanvas-2.0 python-gi python-gi-cairo python-pygraphviz python3-gi python3-gi-cairo python3-pygraphviz gir1.2-gtk-3.0 ipython ipython3  
+apt install -y gir1.2-goocanvas-2.0 python-gi python-gi-cairo python-pygraphviz python3-gi python3-gi-cairo python3-pygraphviz gir1.2-gtk-3.0 ipython ipython3
 
 # Support for MPI-based distributed emulation
 apt install -y openmpi-bin openmpi-common openmpi-doc libopenmpi-dev
@@ -42,3 +42,5 @@ apt install -y vtun lxc
 
 # Support for openflow module (requires some boost libraries)
 apt install -y libboost-signals-dev libboost-filesystem-dev
+
+apt install python-pygccxml
