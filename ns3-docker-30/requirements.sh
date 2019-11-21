@@ -31,11 +31,11 @@ apt install -y sqlite sqlite3 libsqlite3-dev
 apt install -y libxml2 libxml2-dev
 
 # Support for generating modified python bindings
-apt install -y cmake libc6-dev libc6-dev-i386 libclang-6.0-dev llvm-6.0-dev automake pip
+apt install -y cmake libc6-dev libc6-dev-i386 libclang-6.0-dev llvm-6.0-dev automake python-pip
 python3 -m pip install --user cxxfilt
 
 # A GTK-based configuration system
-apt install -y libgtk2.0-0 libgtk2.0-dev
+apt install -y libgtk2.0-0 libgtk2.0-dev libgtk-3-dev glade
 
 # To experiment with virtual machines and ns-3
 apt install -y vtun lxc
