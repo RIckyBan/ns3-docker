@@ -15,6 +15,7 @@ COPY . /usr
 RUN set -x && \
     apt-get update && \
     sh requirements.sh && \
+    pip3 install KiwiDist && \
     # Configure and compile NS-3
     cd /usr/ns-allinone-3.30/ns-3.30 && \
     ./waf configure --build-profile=debug --enable-examples --enable-tests && \

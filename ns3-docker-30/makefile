@@ -1,4 +1,4 @@
-NAME=docker-ns3-30
+NAME=docker-ns3-30:dev
 
 build: Dockerfile
 	if [ -d "./ns-allinone-3.30" ]; then \

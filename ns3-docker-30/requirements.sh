@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # for utility
-apt install -y wget vim tcpdump
+apt install -y wget vim tcpdump python3-pip
 
 # minimal requirements for Python users (release 3.30 and ns-3-dev)
 apt install -y gcc g++ python python3 python3-dev
