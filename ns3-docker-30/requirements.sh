@@ -43,4 +43,4 @@ apt install -y vtun lxc
 # Support for openflow module (requires some boost libraries)
 apt install -y libboost-signals-dev libboost-filesystem-dev
 
-apt install python-pygccxml
+apt install -y python-pygccxml
